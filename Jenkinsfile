@@ -6,12 +6,12 @@ pipeline {
         stage('test') {
           agent any
           environment {
-            test = 'test'
+            TEST = 'test'
           }
           steps {
             echo 'hello'
             sleep 10
-            sh 'echo "hello"'
+            sh 'echo $TEST'
           }
         }
 
