@@ -4,6 +4,10 @@ pipeline {
     stage('test') {
       parallel {
         stage('test') {
+          agent any
+          environment {
+            test = 'test'
+          }
           steps {
             echo 'hello'
             sleep 10
