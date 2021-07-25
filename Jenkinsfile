@@ -29,6 +29,7 @@ pipeline {
     stage('Test') {
       steps {
         sleep 12
+        archiveArtifacts '*'
       }
     }
 
